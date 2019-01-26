@@ -4,8 +4,10 @@ namespace Translit
 {
     public class Translit
     {
-
-        Dictionary<string, string> dictionary = new Dictionary<string, string>()
+        /// <summary>
+        /// Создание словаря. Представляет коллекцию ключей и значений
+        /// </summary>
+        private Dictionary<string, string> dictionary = new Dictionary<string, string>()
         {
             {"а", "a"},
             {"А", "A" },
@@ -209,21 +211,18 @@ namespace Translit
         public string TrRusEng(string source)
         {
             var result = "";
-            
+
             foreach (var ch in source)
             {
                 var ss = "";
-                
+
                 if (dictionary.TryGetValue(ch.ToString(), out ss))
                 {
                     result += ss;
                 }
-                
                 else result += ch;
             }
             return result;
         }
-
     }
-
 }
