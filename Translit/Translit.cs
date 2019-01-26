@@ -10,10 +10,10 @@ namespace Translit
         private Dictionary<string, string> dictionary = new Dictionary<string, string>()
         {
             {"а", "a"},
-            {"А", "A" },
+            {"А", "A"},
 
             {"б", "b"},
-            {"Б", "B" },
+            {"Б", "B"},
 
             {"в", "v"},
             {"В", "V"},
@@ -208,6 +208,11 @@ namespace Translit
             {"H", "X"}
         };
 
+        /// <summary>
+        /// Метод поиска и замены символов в строке
+        /// </summary>
+        /// <param name="source">Текст необходимый перевести</param>
+        /// <returns></returns>
         public string TrRusEng(string source)
         {
             var result = "";
